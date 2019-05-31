@@ -1,0 +1,327 @@
+*{
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+@font-face{
+	src:url("mojfont.ttf");
+	font-family: "Moj Font";
+}
+body{
+  background: url(../img/bg.jpg) no-repeat center center fixed; 
+	background-size: cover;
+  padding:20px 0px;
+  font-family: "Moj Font";
+}
+ul{
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
+}
+a {
+  text-decoration: none;
+}
+@mixin centar{
+  width: 1024px;
+	margin: 0 auto;
+}
+@mixin spaceBetween{
+  display: flex; 
+  justify-content: space-between;
+	flex-wrap: wrap;
+}
+@mixin spaceAround{
+  display: flex; 
+  justify-content: space-between;
+	flex-wrap: wrap;
+}
+$bela:#ffffff;
+$plava:#333366;
+$siva:#252525;
+
+#header{
+  @include centar;
+  height:60px;
+	background-color: rgba(37,37,37,0.8);
+	border-radius: 50px 50px 0px 0px;
+	overflow: hidden;
+	h1 {
+	    font-size:28px;
+	    color: white;
+	    text-align: center;
+	    margin-top: 12px;
+	    animation: size 1.5s steps(50);
+  }
+}
+@keyframes size{
+  from {font-size: 0px;}
+}
+#menu{
+  @include centar;
+  position: sticky;
+  top: 0px;
+  height:55px;
+  background-color: rgba(37,37,37,0.8);
+  padding-top: 8px;
+  box-shadow: 0px 4px 2px -2px $bela;
+  ul {
+    padding-left: 0px;
+    @include spaceBetween;
+    li {
+      width: 25%;
+      text-align: center;
+      a {
+        color: $bela;
+	      font-size: 18px;
+	      :hover{
+	        letter-spacing: 3px;
+	        color: $plava;
+	        font-weight: bold;
+	      }
+      }
+    }
+  }
+}
+
+#slider{
+  @include centar;
+  height:485px;
+	background-image: url(../img/slider.jpg);
+	background-repeat:no repeat;
+	background-size: contain;
+	padding-top: 170px;
+  padding-left: 100px;
+	article {
+	  width: 300px;
+	  height: 200px;
+	  border-radius: 50px 50px 50px 50px;
+	  border: 5px solid $plava;
+	  background-color: rgba(37, 37, 37, 0.8);
+	  padding-top: 25px;
+	  color:$bela;
+	  text-align:center;
+
+	  h2{
+	    font-size: 25px;
+	    margin-bottom: 5px;
+    }
+	  p{
+	    font-size: 20px;
+	    margin-bottom: 25px;
+	  }
+	  a{
+	    padding: 10px;
+	    border: 1px solid $bela;
+	    border-radius: 5px;
+	    font-size:13px;
+	    color: $bela;
+	    :hover {
+	      background-color: rgba(51,51,102,0.8);
+	    }
+	  }
+	}
+}
+#aboutMe{
+  @include centar;
+  @include spaceAround;
+  background-color: rgba(204,204,204,0.8);
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: $siva;
+  h2{
+    width: 100%;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  article{
+    width: 270px;
+  }
+  #me{
+    width: 250px;
+	  height: 350px;
+	  border-radius: 50px;
+	  overflow: hidden;
+	  border: 3px solid $plava;
+	  margin-left: 200px;
+	  img{
+	    width: 100%;
+	    height: 100%;
+	  }
+  }
+  #right{
+    margin-right: 200px;
+    margin-top: 20px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      tr{
+        border-bottom: 3px solid $plava;
+        width: 100%;
+        th {
+	         text-align: left;
+	         padding: 12px 0px;
+        }
+        td {
+          text-align: center;
+        }
+      }
+    }
+  }
+  p {
+    margin: 15px auto;
+    width: 70%;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+}
+#skills{
+  @include centar;
+  padding: 50px 100px;
+  background-color: rgba(255,255,255,0.8);
+  h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: $siva;
+  }
+  article {
+    @include spaceAround;
+    img {
+      margin: 20px;
+    }
+  }
+}
+
+#projects{
+  @include centar;
+  @include spaceAround;
+  padding: 0px 100px;
+  padding-top: 50px;
+  background-color: rgba(204,204,204,0.8);
+  h2{
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: $siva;
+  }
+  article{
+    text-align: center;
+    margin-bottom: 30px;
+    figure {
+      img{
+        border-radius: 50px;
+	      overflow: hidden;
+	      border: 3px solid $plava;
+      }
+      figcaption {
+        margin-top: 10px;
+        a {
+        padding: 10px;
+	      border: 1px solid $plava;
+	      border-radius: 5px;
+	      font-size:15px;
+	      color: $plava;
+	        :hover {
+	        letter-spacing: 2px;
+	        background-color: $plava;
+	        color: $bela;
+	      }
+	    }
+      }
+    }
+  }
+}
+
+#contact{
+  @include spaceAround;
+  @include centar;
+  padding: 50px 100px;
+  background-color: rgba(37,37,37,0.8);
+  border-radius: 0px 0px 50px 50px;
+	overflow: hidden;
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 40px;
+    color: $bela;
+  }
+  h3{
+    text-align: center;
+    color: $bela;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  #form{
+    width: 350px;
+    input,textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 3px solid #cccccc;
+    }
+    input:first-child{
+      height: 30px;
+      padding-left: 5px;
+      :focus{
+        border-radius: 0px;
+        border: 3px solid $plava;
+      }
+    }
+    textarea{
+      height: 100px;
+      padding-top: 5px;
+      padding-left: 5px;
+      :focus{
+        border-radius: 0px;
+        border: 3px solid $plava;
+      }
+    }
+    input:last-child{
+      height: 30px;
+      width: 20%;
+      margin: 0 auto;
+      :hover{
+        width: 25%;
+		    letter-spacing: 2px;
+        background-color: $plava;
+        color: $bela;
+        cursor: pointer;
+      }
+    }
+  }
+  #info{
+    width: 350px;
+    text-align: center;
+    i {
+      font-size: 20px;
+      color: $bela;
+    }
+    p {
+      color: #cccccc;
+      font-size: 15px;
+    }
+    .github{
+      margin-bottom: 10px;
+      a{
+        color: #cccccc;
+        font-size: 15px;
+      }
+    }
+    .links {
+      a {
+        color: #cccccc;
+        font-size: 15px;
+        margin-bottom: 5px;
+        :hover{
+        letter-spacing: 3px;
+      }
+      }
+    }
+  }
+}

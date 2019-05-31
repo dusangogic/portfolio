@@ -1,0 +1,329 @@
+* {
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url("mojfont.ttf");
+  font-family: "Moj Font";
+}
+body {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px 0px;
+  font-family: "Moj Font";
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  width: 1024px;
+  margin: 0 auto;
+  height: 60px;
+  background-color: rgba(37, 37, 37, 0.8);
+  border-radius: 50px 50px 0px 0px;
+  overflow: hidden;
+}
+#header h1 {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-top: 12px;
+  animation: size 1.5s steps(50);
+}
+
+@keyframes size {
+  from {
+    font-size: 0px;
+  }
+}
+#menu {
+  width: 1024px;
+  margin: 0 auto;
+  position: sticky;
+  top: 0px;
+  height: 55px;
+  background-color: rgba(37, 37, 37, 0.8);
+  padding-top: 8px;
+  box-shadow: 0px 4px 2px -2px #ffffff;
+}
+#menu ul {
+  padding-left: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#menu ul li {
+  width: 25%;
+  text-align: center;
+}
+#menu ul li a {
+  color: #ffffff;
+  font-size: 18px;
+}
+#menu ul li a:hover {
+  letter-spacing: 3px;
+  color: #333366;
+  font-weight: bold;
+}
+
+#slider {
+  width: 1024px;
+  margin: 0 auto;
+  height: 485px;
+  background-image: url(../img/slider.jpg);
+  background-repeat: no repeat;
+  background-size: contain;
+  padding-top: 170px;
+  padding-left: 100px;
+}
+#slider article {
+  width: 300px;
+  height: 200px;
+  border-radius: 50px 50px 50px 50px;
+  border: 5px solid #333366;
+  background-color: rgba(37, 37, 37, 0.8);
+  padding-top: 25px;
+  color: #ffffff;
+  text-align: center;
+}
+#slider article h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+#slider article p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+#slider article a {
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #ffffff;
+}
+#slider article a:hover {
+  background-color: rgba(51, 51, 102, 0.8);
+}
+
+#aboutMe {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(204, 204, 204, 0.8);
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: #252525;
+}
+#aboutMe h2 {
+  width: 100%;
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#aboutMe article {
+  width: 270px;
+}
+#aboutMe #me {
+  width: 250px;
+  height: 350px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 3px solid #333366;
+  margin-left: 200px;
+}
+#aboutMe #me img {
+  width: 100%;
+  height: 100%;
+}
+#aboutMe #right {
+  margin-right: 200px;
+  margin-top: 20px;
+}
+#aboutMe #right table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#aboutMe #right table tr {
+  border-bottom: 3px solid #333366;
+  width: 100%;
+}
+#aboutMe #right table tr th {
+  text-align: left;
+  padding: 12px 0px;
+}
+#aboutMe #right table tr td {
+  text-align: center;
+}
+#aboutMe p {
+  margin: 15px auto;
+  width: 70%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#skills {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#skills h2 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 40px;
+  color: #252525;
+}
+#skills article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#skills article img {
+  margin: 20px;
+}
+
+#projects {
+  width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 100px;
+  padding-top: 50px;
+  background-color: rgba(204, 204, 204, 0.8);
+}
+#projects h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 40px;
+  color: #252525;
+}
+#projects article {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#projects article figure img {
+  border-radius: 50px;
+  overflow: hidden;
+  border: 3px solid #333366;
+}
+#projects article figure figcaption {
+  margin-top: 10px;
+}
+#projects article figure figcaption a {
+  padding: 10px;
+  border: 1px solid #333366;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #333366;
+}
+#projects article figure figcaption a:hover {
+  letter-spacing: 2px;
+  background-color: #333366;
+  color: #ffffff;
+}
+
+#contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1024px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background-color: rgba(37, 37, 37, 0.8);
+  border-radius: 0px 0px 50px 50px;
+  overflow: hidden;
+}
+#contact h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+#contact h3 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#contact #form {
+  width: 350px;
+}
+#contact #form input, #contact #form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 3px solid #cccccc;
+}
+#contact #form input:first-child {
+  height: 30px;
+  padding-left: 5px;
+}
+#contact #form input:first-child:focus {
+  border-radius: 0px;
+  border: 3px solid #333366;
+}
+#contact #form textarea {
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+#contact #form textarea:focus {
+  border-radius: 0px;
+  border: 3px solid #333366;
+}
+#contact #form input:last-child {
+  height: 30px;
+  width: 20%;
+  margin: 0 auto;
+}
+#contact #form input:last-child:hover {
+  width: 25%;
+  letter-spacing: 2px;
+  background-color: #333366;
+  color: #ffffff;
+  cursor: pointer;
+}
+#contact #info {
+  width: 350px;
+  text-align: center;
+}
+#contact #info i {
+  font-size: 20px;
+  color: #ffffff;
+}
+#contact #info p {
+  color: #cccccc;
+  font-size: 15px;
+}
+#contact #info .github {
+  margin-bottom: 10px;
+}
+#contact #info .github a {
+  color: #cccccc;
+  font-size: 15px;
+}
+#contact #info .links a {
+  color: #cccccc;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+#contact #info .links a:hover {
+  letter-spacing: 3px;
+}
